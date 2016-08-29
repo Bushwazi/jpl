@@ -1,0 +1,29 @@
+body {
+	font-family: 'Poiret One', sans-serif;
+	font-size:20px;
+	color:_primaryColor;
+	background:_tertiaryColor;
+	letter-spacing: 0.02em;
+	line-height: 1.4em;
+}
+a {
+	color:_secondaryColor;
+	text-decoration:none;
+}
+ul, ol {
+	padding-left: 1.5em;
+}
+
+
+[class^=main],
+.inner {
+	width: 1024px;
+	margin: 0 auto;
+}
+@media (max-width:1044px){
+	[class^=main],
+	.inner {
+		width: calc(100% - 20px);
+		padding: 0 10px;
+	}
+}
