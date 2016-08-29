@@ -1,0 +1,119 @@
+// Base style guide. Core elements only
+html {
+	font-size 10px;
+}
+body {
+	background: _bgcolor;
+	font-family: 'Roboto', sans-serif;
+	padding-top 30px
+	font-size 1em
+	line-height makeEms(14);
+}
+h1 {
+	font-size makeRems(48)
+	line-height makeEms(60,48)
+	headlineFont()
+}
+h2 {
+	font-size makeRems(26)
+	line-height 2em
+	headlineFont()
+}
+h3 {
+	font-size makeRems(23)
+	line-height 2em
+	headlineFont()
+}
+h4 {
+	font-size makeRems(20)
+	line-height 2em
+	headlineFont()
+}
+h5 {
+	font-size makeRems(17)
+	line-height 2em
+	headlineFont()
+}
+h6 {
+	font-size makeRems(14)
+	line-height 2em
+	headlineFont()
+}
+p {
+	margin-bottom 1em
+}
+strong {
+	boldFont()
+}
+em {
+	italicFont()
+}
+small {
+	display inline-block
+	font-size makeRems(10)
+	line-height makeEms(18,10)
+}
+a {
+	text-decoration none
+	color #083a03
+	&:hover {
+		text-decoration underline
+	}
+}
+table {
+	border-collapse: collapse;
+	font-size: makeRems(10);
+	background white
+	thead th {
+		background: #d6d6d6;
+	}
+	tbody th {
+		background #a3a3a3
+		text-transform uppercase
+	}
+}
+th,
+td {
+  border: solid 1px #000;
+  width: 25%;
+  box-sizing: border-box;
+  padding: 1em;
+  vertical-align middle
+}
+th {
+  text-align: left;
+  boldFont()
+}
+tfoot td {
+	font-size 0.75em
+	text-align center
+}
+ul {
+	list-style: disc outside;
+	padding-left 2em
+}
+button {
+	border none
+	background none
+	height inherit
+	line-height inherit
+	cursor pointer
+	font inherit
+	&:active,
+	&:focus {
+		outline none
+	}
+}
+input,
+textarea {
+	width 100%
+	box-sizing border-box	
+	font inherit
+	border dashed 1px black
+	padding 0.25em 0.5em
+}
+@media (min-width:480px){
+	html {
+		font-size 14px;
+	}
+}

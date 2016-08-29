@@ -1,0 +1,16 @@
+extends _templates/main
+block vars
+	- var title = 'SOCIAL'
+	- var description = 'If I could replace 90 minutes of my workday'
+	- var keywords = 'pug templates,node,gulp,json,static site generation,instagram API'
+	- var pageClass = 'home'
+	- var hobbies = locals['hobbies']
+
+block content	
+	include svg/logo.svg
+	h1 90 minutes: Social Media
+	p 
+		| These images are collected via the Instagram API. Just trying to hashtag myself into a new job!
+	section.insta
+		h2 Instagram Feed #remotelife
+		ul.instagram-feed

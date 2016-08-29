@@ -1,0 +1,17 @@
+- var pages = locals['pages']
+doctype html
+html.no-js(lang='en')
+	block vars
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+		title #{title} | Jason Lydon: website builder, solution designer.
+		meta(name='description', content='#{description}')
+		meta(name="keywords", content="#{keywords}")
+		include ../_inc/head.pug
+	body(class='page-#{pageclass}')
+		include ../_inc/header.pug
+		main.content
+			block content
+		include ../_inc/footer.pug
+		include ../_inc/foot.pug

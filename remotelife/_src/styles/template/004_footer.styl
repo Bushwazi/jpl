@@ -1,0 +1,55 @@
+footer {
+	border-top dashed 1px black
+	background white
+	padding makeRems(20)
+	figure {
+		display flex
+		align-items center
+		justify-content space-between
+		picture {
+			width 25%
+			order 2
+		}
+		figcaption {
+			width 65%
+			order 1
+		}
+		img {
+			width 100%
+			border-radius 50%
+			border dashed 1px black
+		}
+	}
+	.nav {
+		margin 0
+		padding 0
+		list-style none
+	}
+	> small {
+		width 100%
+		text-align center
+		margin makeRems(20,10) 0 0
+	}
+}
+@media (min-width:600px){
+	footer {
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+		figure {
+			picture {
+				width 100px
+				margin-right 10px
+				order 1
+			}
+			img {
+				width 100%
+				height auto
+			}
+			figcaption {
+				width auto
+				order 2
+			}
+		}
+	}
+}

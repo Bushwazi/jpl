@@ -1,0 +1,16 @@
+doctype html
+html.no-js(lang='en')
+	block vars
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+		title #{title} | Jason Lydon: website builder, solution designer.
+		meta(name='description', content='#{description}')
+		meta(name="keywords", content="#{keywords}")
+		include ../_inc/head.jade
+	body(class='page-#{pageClass}')
+		//- include ../_inc/header.jade
+		main.content
+			block content
+		include ../_inc/footer.jade
+		include ../_inc/foot.jade

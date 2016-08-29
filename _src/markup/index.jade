@@ -1,0 +1,23 @@
+extends _templates/main
+block vars
+	- var title = 'website builder, solution designer'
+	- var description = 'Jason Lydon: I build websites'
+	- var keywords = 'jade,node,gulp,json,static site generation'
+	- var pageClass = 'intro'
+
+block content	
+	h1: span &lt;jason lydon /&gt;
+	h2: span
+		| i build websites.
+		br
+		| i design solutions.
+	ul.links
+		li
+			a(href="/services/full-stack-web-development.html" title="Learn more about Full-Stack Web Development") full-stack web development
+		li
+			a(href="/services/front-end-web-development.html" title="Learn more about Front-End Web Development") front-end web development
+		li
+			a(href="/services/" title="View all services") all services
+	a(href="/contact.html" title="Check my availability") hit me up!
+	br
+	a(href="/about.html" title="Learn more about Jason Lydon") based in sparta, nj 07871

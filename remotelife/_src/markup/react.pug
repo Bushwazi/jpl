@@ -1,0 +1,11 @@
+extends _templates/react
+block vars
+	- var title = 'REACT'
+	- var description = 'A quick summary of what Jason Lydon would do with 90 minutes of his day, if his wife let him'
+	- var keywords = 'pug templates,node,gulp,json,static site generation,instagram API'
+	- var pageClass = 'home'
+	- var hobbies = locals['hobbies']
+
+block content	
+	include svg/logo.svg
+	div.react-here

@@ -1,0 +1,109 @@
+footer {
+	border-top solid 3px black
+	background white
+	padding 0 makeRems(20)
+	box-shadow inset 0px 0px 0px 3px _blue
+	position fixed
+	bottom 0
+	left 0
+	width 100%
+	box-sizing: border-box;
+	a {
+		color #666;
+	}
+	header {
+		width 100%
+		display flex
+		justify-content space-between
+		height 3em
+		ul {
+			display flex
+			margin 0
+			padding 0
+			list-style none
+			li {
+				margin 1em
+			}		
+		}
+	}
+	figure {
+		display flex
+		align-items center
+		justify-content space-between
+		picture {
+			width 25%
+			order 2
+		}
+		figcaption {
+			width 65%
+			order 1
+			line-height 1em
+		}
+		img {
+			width 100%
+			border-radius 50%
+			border dashed 1px black
+		}
+		p {
+			margin 0
+		}
+	}
+	.template-contact-form,
+	nav {
+		display none
+	}
+	button {
+		fancyButtons()
+		margin 0 0 0 auto
+	}
+	> small {
+		width 100%
+		text-align center
+		margin 0 0 makeRems(7,10) 0
+	}
+}
+@media (min-width:600px){
+	footer {
+		display flex
+		justify-content space-between
+		flex-wrap wrap
+		figure {
+			picture {
+				width 100px
+				margin-right 10px
+				order 1
+			}
+			img {
+				width 100%
+				height auto
+			}
+			figcaption {
+				width auto
+				order 2
+			}
+		}
+	}
+}
+footer nav {
+	margin 2em 0 0 0
+	width 100%
+	ul {
+		display flex 
+		flex-wrap wrap
+		width 100%
+		li {
+			width 16.66667%
+		}
+	}
+}
+footer [target="_blank"]:after {
+	content: " ◳"
+
+}
+.showing-contact-form [data-cta="toggle-contact"],
+.showing-footer-nav [data-cta="toggle-menu"] {
+	color red
+	&:before {
+		content: 'X ';
+	}
+}

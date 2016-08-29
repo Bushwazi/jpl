@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>About Me | Jason Lydon: website builder, solution designer.</title><meta name="description" content="Jason Lydon: a wordy version of my intro"><meta name="keywords" content="jade,node,gulp,json,static site generation"><meta name="viewport" content="width=device-width"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><link rel="icon" href="/favicon.ico" type="image/x-icon"><link rel="stylesheet" type="text/css" href="/public/styles/main.css"></head><body class="page-timeline"><main class="content"><style>* {
+	padding: 0;
+	margin: 0;
+}
+input[type="range"]{
+	width: 90%;
+	margin: 0 5%;
+}
+label,
+output {
+	display: block;
+	text-align: center;
+}
+article {
+	width:90%;
+	padding:100px 5%;
+	overflow-x:auto; 
+}
+label {
+	overflow: hidden;
+	width:1600%;
+}
+label span {
+	display: inline-block;
+	width: calc((100/16) * 1%);
+	float: left;
+	text-align: center;
+}</style><label for="date"><span>2000</span><span>2001</span><span>2002</span><span>2003</span><span>2004</span><span>2005</span><span>2006</span><span>2007</span><span>2008</span><span>2009</span><span>2010</span><span>2011</span><span>2012</span><span>2013</span><span>2014</span><span>2015</span></label><input type="range" id="date" min="0" max="180" value="174" step="1"><output for="fader" id="selected-date"></output><script>var timeline = {};
+timeline["el"] = document.getElementsByTagName("article")[0];
+timeline["width"] = timeline.el.scrollWidth;
+timeline.horiPos = timeline.el.scrollLeft;
+console.log(timeline.el.scrollWidth, timeline.el.scrollLeft);
+document.getElementById("date").addEventListener('change', function(evt){
+outputUpdate();
+});
+function outputUpdate() {
+var selectedDate = document.getElementById("date").value;
+myYear = getYear(Math.floor(selectedDate / 12)),
+myMonth = getMonth(selectedDate % 12);
+document.querySelector('#selected-date').value = myMonth + "/" + myYear;
+timeline.el.scrollLeft = parseInt(selectedDate) / 180 * timeline.el.scrollWidth;
+console.log( parseInt(selectedDate) / 180 * timeline.el.scrollWidth, selectedDate, timeline.el.scrollWidth, timeline.el.scrollLeft);
+}
+function getYear(num){
+if(num < 10){
+return "200" + num;
+} else {
+return "20" + num;
+}
+}
+function getMonth(num){
+var months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
+return months[num];
+}
+outputUpdate();
+</script><ul><li> </li><h2>HTML</h2><ul><li>HTML5</li><li>JADE</li><li>HAML</li><li>SVG</li><li> </li></ul><h2>CSS</h2><ul><li>SASS</li><li>LESS</li><li>STYLUS</li><li>MYTH</li><li> </li></ul><h2>JS</h2><ul><li>Code JS</li><li>jQuery</li><li>node.js</li><li>Object Oriented</li><li>Backbone.js</li><li> </li></ul><h2>LANGUAGES</h2><h3>PHP</h3><ul><li>Vanilla</li><li>Wordpress</li><li>Code Igniter</li><li>Symfony</li><li> </li><li> </li><li> </li><li> </li><li> </li><li> </li></ul><h3>asp</h3><ul><li> </li></ul><h3>java</h3><ul><li> </li><li>VIDEO</li><li>PHOTO</li></ul></ul></main><footer><header><figure><picture><img src="/public/img/me.jpg" alt="Jason Lydon"></picture><figcaption><p> 
+&lt;jason jydon /&gt;<br>I build websites. I design solutions.</p></figcaption></figure><ul><li><button data-cta="toggle-contact">CONTACT</button></li><li><button data-cta="toggle-menu">MENU</button></li></ul></header><form class="template-contact-form"><fieldset class="block"><button data-cta="close-contact">X</button><fieldset><label for="name">Name:</label><input type="text" id="name" name="name" placeholder="Who the?" required></fieldset><fieldset><label for="contact">Contact:</label><input type="text" id="contact" name="contact" placeholder="How the?" required></fieldset><fieldset><label for="message">Message:</label><textarea name="message" id="message" required>What the?</textarea></fieldset><button type="submit">Send it!</button></fieldset></form><nav><ul><li><a href="/about.html" title="Learn more about Jason Lydon">WhoIs Jason</a></li><li><a href="/tools.html" title="What does Jason Lydon use to build websites?">Tools</a></li><li><a href="/services/" title="View all services">Services</a></li><li><a href="/portfolio.html" title="Check out a list of my works">Portfolio</a></li><li><a href="/resume.html" title="Learn more about my work history">Resume</a></li><li><a href="http://stackoverflow.com/users/1588819/jason-lydon" title="profile for Jason Lydon at Stack Overflow, Q&amp;amp;A for professional and enthusiast programmers" target="_blank">Stack Overflow</a></li><li><a href="https://medium.com/@bushwazi" title="Read my writings on Medium" target="_blank">Medium</a></li><li><a href="https://github.com/Bushwazi/" title="Check out some of my code!" target="_blank">Github</a></li><li><a href="https://twitter.com/bushwa" title="Tweet it up" target="_blank">@bushwa</a></li><li><a href="https://codepen.io/Bushwazi/" title="Code Samples" target="_blank">CodePen</a></li><li><a href="https://jsfiddle.net/user/Bushwazi/fiddles/" title="lacking code samples!" target="_blank">jsfiddle</a></li></ul></nav><small>Copyright &copy; 2016 Jason Lydon. All rights reserved. Sparta, NJ 07871.</small></footer><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script><script>WebFont.load({
+  google: {
+    families: ['Orbitron:400,900,700,500']
+  }
+});
+</script><script src="/public/js/main.js"></script></body></html>

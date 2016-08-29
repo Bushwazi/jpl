@@ -1,0 +1,109 @@
+{
+	"arduino": {
+		"cpu": {
+			"title": "Getting Started with Arduino Kit",
+			"status": "pathetically unopened",
+			"emotion": "disappointment"
+		},
+		"hardware": {
+			"title": "Learn-to-solder kit",
+			"status": "also unopened",
+			"emotion": "extreme disappointment"
+		}
+	},
+	"Lego MindStorm": {
+		"hardware": {
+			"title": "NXT 2.0",
+			"status": "only built one version",
+			"emotion": "Will be psyched when the kids are old enough to really enjoy it"
+		}
+	},
+	"reading": {
+		"foundation": {
+			"title": "The Foundation Trilogy",
+			"status": "crisp and unopened",
+			"emotion": "sadness"
+		},
+		"twd": {
+			"title": "The Walking Dead: Compendium 3",
+			"status": "dead, bloated and in a well",
+			"emotion": "grimey"
+		},
+		"cerebus": {
+			"title": "Cerebus Volume 1 & 2",
+			"status": "not even next to the bed",
+			"emotion": "neutral"
+		}
+	},
+	"cycling": {
+		"poprad": {
+			"title": "2005 LeMond Poprad",
+			"status": "rear derailleur got twisted in spokes, which bent the tab on the frame as well",
+			"emotion": "grinding"
+		}
+	},
+	"beer brewing": {
+		"kit": {
+			"title": "Beer Kit",
+			"status": "aging the wrong way in the basement",
+			"emotion": "tension"
+		}
+	},
+	"basketball": {
+		"ball": {
+			"title": "Gave my ball to Schultz",
+			"status": "ball-less and hoopless, I need to clear a spot in the driveway so the kids and I have a hoop in the future",
+			"emotion": "pathetic"
+		}
+	},
+	"yard": {
+		"veggies": {
+			"title": "Vegetable Garden",
+			"status": "Heirloom tomatoes and jalapenos started, bed built. Just need to get everything else rolling",
+			"emotion": "kinda excited about it."
+		},		
+		"yard": {
+			"title": "Landscaping",
+			"status": "Still have to clear and seed that spot",
+			"emotion": "neutral"
+		}
+	},
+	"balance board": {
+		"hardware": {
+			"title": "Vew-Do",
+			"status": "dusty",
+			"emotion": "loop sided"
+		}
+	},
+	"beer brewing": {
+		"kit": {
+			"title": "Beer Kit",
+			"status": "aging the wrong way in the basement",
+			"emotion": "tension"
+		}
+	},
+	"jogging": {
+		"hardware": {
+			"title": "Apparently you just run",
+			"status": "stiff",
+			"emotion": "chubby"
+		}
+	},	
+	"rubiks": {
+		"three-panel": {
+			"title": "The Cube (three panel)",
+			"status": "Knew it, starting to lose it...",
+			"emotion": "crusty"
+		},
+		"four-panel": {
+			"title": "The Revenge (four panel)",
+			"status": "Started learning the patterns, need to revisit",
+			"emotion": "cringe worthy"
+		},
+		"five-panel": {
+			"title": "The Professor (five panel)",
+			"status": "Don't know it's specifics yet",
+			"emotion": "distant"
+		}
+	}
+}

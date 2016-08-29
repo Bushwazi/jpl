@@ -1,0 +1,18 @@
+extends _templates/main
+block vars
+		- var title = 'Rubix SVG'
+		- var description = 'Jason Lydon: a wordy version of my intro'
+		- var keywords = 'jade,node,gulp,json,static site generation'
+		- var pageClass = 'rubiks'
+
+block content 
+	figure
+		include svg/rubiks.svg
+	section.container
+		div#cube
+			figure.front 1
+			figure.back 2
+			figure.right 3
+			figure.left 4
+			figure.top 5
+			figure.bottom 6

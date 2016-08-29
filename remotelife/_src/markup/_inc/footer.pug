@@ -1,0 +1,15 @@
+footer
+	figure
+		picture
+			img(src="public/img/me.jpg" alt="Jason Lydon")
+		figcaption
+			p I'm Jason Lydon.
+			p I build websites. I design solutions.
+	ul.nav
+		li: strong PAGES
+		for page in pages
+			li: a(href=page.file.replace(".pug", ".html") title="Learn more about " + page.title) &bull; #{page.title}
+	small 
+		| Copyright &copy; 2016 Jason Lydon. All rights reserved.
+		br
+		| Sparta, NJ 07871

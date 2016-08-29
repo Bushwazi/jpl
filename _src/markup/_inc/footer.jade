@@ -1,0 +1,40 @@
+footer
+	header
+		figure
+			picture
+				img(src="/public/img/me.jpg" alt="Jason Lydon")
+			figcaption
+				p 
+					| &lt;jason jydon /&gt;
+					br
+					| I build websites. I design solutions.
+		ul
+			li: button(data-cta="toggle-contact") CONTACT
+			li: button(data-cta="toggle-menu") MENU
+	form(class="template-contact-form")
+		fieldset.block
+			button(data-cta="close-contact") X
+			fieldset
+				label(for="name") Name:
+				input(type="text" id="name" name="name" placeholder="Who the?" required)
+			fieldset
+				label(for="contact") Contact:
+				input(type="text" id="contact" name="contact" placeholder="How the?" required)
+			fieldset
+				label(for="message") Message:
+				textarea(name="message" id="message" required) What the?
+			button(type="submit") Send it!
+	nav
+		ul
+			li: a(href="/about.html" title="Learn more about Jason Lydon") WhoIs Jason
+			li: a(href="/tools.html" title="What does Jason Lydon use to build websites?") Tools
+			li: a(href="/services/" title="View all services") Services
+			li: a(href="/portfolio.html" title="Check out a list of my works") Portfolio
+			li: a(href="/resume.html" title="Learn more about my work history") Resume
+			li: a(href="http://stackoverflow.com/users/1588819/jason-lydon" title="profile for Jason Lydon at Stack Overflow, Q&amp;A for professional and enthusiast programmers" target="_blank") Stack Overflow
+			li: a(href="https://medium.com/@bushwazi" title="Read my writings on Medium" target="_blank") Medium
+			li: a(href="https://github.com/Bushwazi/" title="Check out some of my code!" target="_blank") Github
+			li: a(href="https://twitter.com/bushwa" title="Tweet it up" target="_blank") @bushwa
+			li: a(href="https://codepen.io/Bushwazi/" title="Code Samples" target="_blank") CodePen
+			li: a(href="https://jsfiddle.net/user/Bushwazi/fiddles/" title="lacking code samples!" target="_blank") jsfiddle
+	small Copyright &copy; 2016 Jason Lydon. All rights reserved. Sparta, NJ 07871.

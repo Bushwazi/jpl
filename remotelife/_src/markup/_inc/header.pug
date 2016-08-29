@@ -1,0 +1,7 @@
+header 
+	input(type="checkbox" name="show navigation" id="nav-toggle")
+	label(for="nav-toggle")
+	a(href="/remotelife" title="Return to homepage" data-cta="home") Jason Lydon
+	nav: ul
+		for page in pages
+			li: a(href=page.file.replace(".pug", ".html") title="Learn more about " + page.title) &bull; #{page.title}

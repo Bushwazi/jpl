@@ -1,0 +1,89 @@
+extends _templates/main
+block vars
+	- var title = 'website builder, solution designer'
+	- var description = 'Jason Lydon: I build websites'
+	- var keywords = 'jade,node,gulp,json,static site generation'
+	- var pageClass = 'portfolio'
+
+block content	
+	h1 Featured Work
+	ol.work-list
+		li 
+			strong: a(href="http://besentient.com" title="View the BeSentient website" target="_blank") BeSentient.com (version 4)
+			small For Sentient
+			| Requirements
+			ul
+				li 
+					| Responsive Layout
+					img(src="/public/img/portfolio/besentient_1.jpg" alt="BeSentient.com Responsive Layout")
+					| In 2016, or any year for that matter, a developer should know how to build a responsive layout without frameworks and libraries. We only have to support modern browsers, so the site is `flexbox` and `vw` heavy.
+				li
+					| Animated SVGs
+					img(src="/public/img/portfolio/besentient_2.jpg" alt="BeSentient.com Animated SVGs")
+					| In the first iteration of this version of my employers corporate site, I wanted to learn SNAPsvg, so all of the original SVG animations were done via SNAP. But our in house animator prototyped the intro animation of the logo, so I took that animation theme, which I knew I could do using CSS' `stroke-dasharray` and ran with it. All of the SVG animations are now CSS based.
+				li 
+					| Dynamic Data
+					img(src="/public/img/portfolio/besentient_3.jpg" alt="BeSentient.com Dynamic Data")
+					| Originally, I just piped `json` through `Pug templates`, but with our latest update, our team wanted to pull information from our WordPress blog. I took this opportunity to add any content that I've had to update on a regular basis to the blog using `Custom Post Types` and then called the data onto the site using WordPress's new `WP REST API`.
+		li 
+			strong: a(href="http://blog.besentient.com/" title="View the BeSentient blog" target="_blank") BeSentient Blog, hidden content updates
+			small For Sentient
+			| Requirements
+			ul
+				li
+					| Expose the posts for use on an outside website (besentient.com)
+					img(src="/public/img/portfolio/sentientblog_1.jpg" alt="BLOG.BeSentient.com Dynamic Data")
+					| Hurray for the WordPress REST API! All we had to do was add the plugin
+				li 
+					| Create custom, hidden post data
+					img(src="/public/img/portfolio/sentientblog_2.jpg" alt="BLOG.BeSentient.com Custom Post Types")
+					| We needed to be able to get posts, as well as news and job postings. While I was at it, I added employees to the list (because it's something I was being asked to update on a regular basis). I had to learn about making custom post types via `create_post_type()`, which was easy enough. While building custom post types, you can also hide them from public. Done and done.
+				li
+					| Manage custom post dashboard pages 
+					img(src="/public/img/portfolio/sentientblog_3.jpg" alt="BLOG.BeSentient.com Custom Post Type Inputs")
+					| while you are using `create_post_type()`, you can call any default input that a WordPress post has available, but that wasn't specific enough. So I used the `add_action()` hook to add all sorts of custom inputs.
+				li
+					| Manage the REST API data
+					img(src="/public/img/portfolio/sentientblog_4.jpg" alt="BLOG.BeSentient.com Custom Post Type used with WP REST API")
+					| Other then exposing all of the custom post types via the WP REST API, I also had to tweak some of the data being exposed. Categories and featured images are pretty useless if they don't have the category name or image URL. To solve this riddle, I had to utilize `register_rest_field()`'s `get_callback` method.
+		li 
+			strong: a(href="http://passorpuff.com/intro" title="View the PassOrPuff website" target="_blank")  PassOrPuff.com
+			small Side Project
+			| Requirements
+			ul
+				li
+					| Work with partners to build and market a WebApp
+					img(src="/public/img/portfolio/porp_1.jpg" alt="PassOrPuff")
+					| A friend of mine came up with the idea, so I've been working with him (and other partners) through the whole process. The involves digital marketing plans, proof of concept, managing the development and anything else that comes up.
+				li
+					| Build templates(blades) for a Laravel site
+					img(src="/public/img/portfolio/porp_2.jpg" alt="PassOrPuff")
+					| I had to get up to speed with Laravel, speaking Laravel and Laravel's blades
+				li
+					| Work with partners to maintain site
+					br
+					| My primary role was to work through all of the front end development because one of the partners is a full stack webmaster, but the didn't keep me out of the controllers, routing or from ssh-ing MySQL to make updates during our POC phase. 
+		li
+			strong NorthAmerican moving templates 
+			small For Sentient
+			| Requirements
+			ul
+				li
+					| Build front end templates to be used in a Sitefinity build (managed by an outside resource). All assets, sans images, needed to have an uncompressed and compressed version. We also had to hand off well documented build assets.
+					br
+					| Using static site generator concepts, we just built out static versions of all deliverables using Gulp, Jade Templates, JSON, Javascript and Stylus. The gulp tasks managed the "two versions of all assets" problem. 
+		li
+			strong: a(href="http://www.livalorx.com/" title="View the LIVALO DTC website" target="_blank")  LIVALO RX website 
+			small For Sentient
+			| Requirements
+			ul
+				li
+					| Scroll Event Animation overload!
+					br
+					| ...
+				li
+					| Animated SVG to 11 on the 
+					a(href="http://www.livalorx.com/managingcholesterol/" title="Check out the animations" target="_blank") Managing Cholesterol 
+					| page
+					br
+					| Web Animations API aka WAAPI. 

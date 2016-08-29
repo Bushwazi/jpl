@@ -1,0 +1,41 @@
+.content {
+	padding 2em
+	width 90%
+	max-width 1000px
+	margin 0 auto
+	position relative
+}
+
+.content {
+	h1 span,
+	h2 span,
+	a,
+	p,
+	blockquote {
+		display inline-block
+		color #666;
+		background alpha(white, 0.8);
+		padding 0.25em 0.5em;
+	}
+	ul {
+		list-style:none
+		padding 0
+	}
+	li a {
+		// position relative
+		padding 0.25em 0.5em;
+		// &:before {
+		// 	content:'•'
+		// 	position absolute
+		// 	left: 0.5em
+		// }
+	}
+	a:hover {
+		text-decoration none
+		color green
+	}
+	blockquote p {
+		background none
+		margin 0
+	}
+}

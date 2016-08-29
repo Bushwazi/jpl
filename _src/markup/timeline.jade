@@ -1,0 +1,131 @@
+extends _templates/main
+block vars
+    - var title = 'About Me'
+    - var description = 'Jason Lydon: a wordy version of my intro'
+    - var keywords = 'jade,node,gulp,json,static site generation'
+    - var pageClass = 'timeline'
+
+block content   
+    style.
+        * {
+        	padding: 0;
+        	margin: 0;
+        }
+        input[type="range"]{
+        	width: 90%;
+        	margin: 0 5%;
+        }
+        label,
+        output {
+        	display: block;
+        	text-align: center;
+        }
+        article {
+        	width:90%;
+        	padding:100px 5%;
+        	overflow-x:auto; 
+        }
+        label {
+        	overflow: hidden;
+        	width:1600%;
+        }
+        label span {
+        	display: inline-block;
+        	width: calc((100/16) * 1%);
+        	float: left;
+        	text-align: center;
+        }
+    label(for="date")
+        span 2000
+        span 2001
+        span 2002
+        span 2003
+        span 2004
+        span 2005
+        span 2006
+        span 2007
+        span 2008
+        span 2009
+        span 2010
+        span 2011
+        span 2012
+        span 2013
+        span 2014
+        span 2015
+    input(type="range" id="date" min="0" max="180" value="174" step="1")
+    output(for="fader" id="selected-date")
+    script.
+        var timeline = {};
+        timeline["el"] = document.getElementsByTagName("article")[0];
+        timeline["width"] = timeline.el.scrollWidth;
+        timeline.horiPos = timeline.el.scrollLeft;
+        console.log(timeline.el.scrollWidth, timeline.el.scrollLeft);
+        document.getElementById("date").addEventListener('change', function(evt){
+        outputUpdate();
+        });
+        function outputUpdate() {
+        var selectedDate = document.getElementById("date").value;
+        myYear = getYear(Math.floor(selectedDate / 12)),
+        myMonth = getMonth(selectedDate % 12);
+        document.querySelector('#selected-date').value = myMonth + "/" + myYear;
+        timeline.el.scrollLeft = parseInt(selectedDate) / 180 * timeline.el.scrollWidth;
+        console.log( parseInt(selectedDate) / 180 * timeline.el.scrollWidth, selectedDate, timeline.el.scrollWidth, timeline.el.scrollLeft);
+        }
+        function getYear(num){
+        if(num < 10){
+        return "200" + num;
+        } else {
+        return "20" + num;
+        }
+        }
+        function getMonth(num){
+        var months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
+        return months[num];
+        }
+        outputUpdate();
+
+    ul
+        li 
+        h2 HTML
+        ul
+            li HTML5
+            li JADE
+            li HAML
+            li SVG
+            li 
+        h2 CSS
+        ul
+            li SASS
+            li LESS
+            li STYLUS
+            li MYTH
+            li 
+        h2 JS
+        ul
+            li Code JS
+            li jQuery
+            li node.js
+            li Object Oriented
+            li Backbone.js
+            li 
+        h2 LANGUAGES
+        h3 PHP
+        ul
+            li Vanilla
+            li Wordpress
+            li Code Igniter
+            li Symfony
+            li 
+            li 
+            li 
+            li 
+            li 
+            li 
+        h3 asp
+        ul
+            li 
+        h3 java
+        ul
+            li 
+            li VIDEO
+            li PHOTO

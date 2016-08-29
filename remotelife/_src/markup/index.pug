@@ -1,0 +1,15 @@
+extends _templates/main
+block vars
+	- var title = 'REMOTE LIFE'
+	- var description = 'A quick summary of what Jason Lydon would do with 90 minutes of his day, if his wife let him'
+	- var keywords = 'pug templates,node,gulp,json,static site generation,instagram API'
+	- var pageClass = 'home'
+	- var hobbies = locals['hobbies']
+
+block content	
+	include svg/logo.svg
+	h1 90 minutes
+	p 
+		| The concept of this website content is what would I ideally do with an extra 90 minutes of my day. This 90 minute block would exist because I will no longer be spending that time driving back and forth to work. The content is "ideal" becuase 
+		em the reality is I would probably spend the time finishing up ideas from work or washing dishes
+		| , but it's nice to dream...
